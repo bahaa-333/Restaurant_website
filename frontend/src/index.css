@@ -4,10 +4,6 @@
 
 @import "tailwindcss";
 
-.hero-section {
-  @apply bg-[#E9E2D6] w-screen h-dvh flex flex-row justify-start items-start;
-}
-
 .font-montserrat {
   font-family: "Montserrat", sans-serif;
 }
@@ -17,4 +13,12 @@
 }
 .font-inter {
   font-family: "Inter", sans-serif;
+}
+
+.hero-section {
+  @apply bg-[#E9E2D6] w-screen h-dvh flex flex-row justify-start items-start;
+}
+
+.about-section {
+  @apply bg-white w-screen h-auto  flex flex-row justify-start items-start;
 }

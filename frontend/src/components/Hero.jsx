@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../assets/logo_no_bg.png";
-import plate from "../assets/burger_no_bg.png";
 import video from "../assets/grill_video.mp4";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
