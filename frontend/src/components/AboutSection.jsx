@@ -30,8 +30,8 @@ const AboutSection = () => {
       <div className="mt-25 ml-52">
         {/*title*/}
         <div>
-          <h1 className="font-montserrat font-black text-7xl mb-3 tracking-wider text-[#ffd476] ">
-            Plan-B
+          <h1 className="font-montserrat font-bold text-3xl mb-2 tracking-wider text-[#ffd476] ">
+            Welcome To Plan-B
           </h1>
           <h1 className="font-montserrat font-black text-5xl tracking-wide text-black mb-12">
             Dive Into Pure Flavor

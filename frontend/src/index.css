@@ -20,5 +20,8 @@
 }
 
 .about-section {
-  @apply bg-white w-screen h-auto  flex flex-row justify-start items-start;
+  @apply bg-[#fffbf08a] w-screen h-auto  flex flex-row justify-start items-start;
+}
+.favorites-section {
+  @apply bg-[#FFD476] w-screen h-auto  flex flex-col justify-center items-center;
 }
