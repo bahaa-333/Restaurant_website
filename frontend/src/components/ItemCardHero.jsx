@@ -22,7 +22,7 @@ const ItemCardHero = ({ props, className = "" }) => {
           <h2 className="text-xl text-white font-semibold font-montserrat mb-2">
             {props.name}
           </h2>
-          <p className="text-gray-200 shadow-2xs font-inter mb-4">
+          <p className="text-gray-200 shadow-gray-50 font-inter mb-4">
             {props.description}
           </p>
         </div>
