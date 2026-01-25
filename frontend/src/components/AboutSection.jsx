@@ -41,14 +41,12 @@ const AboutSection = () => {
         {/*description*/}
         <div>
           <h2 className="font-inter font-normal text-lg text-black w-180">
-            Plan-B Resto Café, founded in 2024 and nestled in the heart of
-            Rashaya, Lebanon, brings a fresh and modern touch to Western cuisine
-            in a warm and inviting setting. The restaurant offers a rich
-            selection of flavorful pastas, gourmet sandwiches, juicy burgers,
-            crisp salads, and unique Plan-B signature specialties, all prepared
-            with quality ingredients and attention to detail, creating a relaxed
-            yet vibrant destination for food lovers to enjoy great taste and
-            atmosphere.
+            Plan-B Resto Café is a modern Western cuisine destination in the
+            heart of Rashaya, Lebanon. Founded in 2024, we serve a carefully
+            crafted menu of flavorful pastas, gourmet sandwiches, juicy burgers,
+            fresh salads, and our signature Plan-B specialties. In a warm,
+            stylish atmosphere, we bring together quality ingredients, bold
+            flavors, and relaxed vibes for an unforgettable dining experience.
           </h2>
         </div>
 

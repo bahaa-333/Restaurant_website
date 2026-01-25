@@ -3,6 +3,7 @@ import Home from "./pages/Home.jsx";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
+import About from "./pages/About.jsx";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <main className="flex-1 min-h-0">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </main>
       <Footer />
