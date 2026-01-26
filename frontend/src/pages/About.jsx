@@ -121,28 +121,41 @@ const About = () => {
         opacity: 0,
         duration: 1,
         ease: "power2.out",
-        scrollTrigger: { trigger: sec1Ref.current, start: "top 80%" },
+        scrollTrigger: {
+          trigger: sec1Ref.current,
+          start: "top 80%",
+        },
       });
       gsap.from(".box1", {
         x: 100,
         opacity: 0,
         duration: 1,
         ease: "power2.out",
-        scrollTrigger: { trigger: sec1Ref.current, start: "top 80%" },
+        scrollTrigger: {
+          trigger: sec1Ref.current,
+          start: "top 80%",
+        },
       });
       gsap.from(".image2", {
         y: 100,
         opacity: 0,
         duration: 1,
         ease: "power2.out",
-        scrollTrigger: { trigger: sec2Ref.current, start: "top 80%" },
+        scrollTrigger: {
+          trigger: sec2Ref.current,
+          start: "top 80%",
+          //toggleActions: "play reverse play reverse",
+        },
       });
       gsap.from(".box2", {
         x: -100,
         opacity: 0,
         duration: 1,
         ease: "power2.out",
-        scrollTrigger: { trigger: sec2Ref.current, start: "top 80%" },
+        scrollTrigger: {
+          trigger: sec2Ref.current,
+          start: "top 80%",
+        },
       });
 
       // Values section animations
@@ -158,7 +171,6 @@ const About = () => {
           scrollTrigger: {
             trigger: valuesRef.current,
             start: "top 70%",
-            toggleActions: "play none none reverse",
           },
         },
       );
@@ -181,7 +193,6 @@ const About = () => {
           scrollTrigger: {
             trigger: valuesRef.current,
             start: "top 65%",
-            toggleActions: "play none none reverse",
           },
         },
       );
@@ -312,7 +323,7 @@ const About = () => {
               service while staying true to our core values of quality,
               authenticity, and hospitality.
             </p>
-            <p className="text-[80px] leading-[0.8] font-passion font-normal text-[#FAF7F0] pl-3 -rotate-90 pb-2">
+            <p className="text-[80px] tracking-[0.012em] leading-[0.8] font-passion font-normal text-[#FAF7F0] pl-3 -rotate-90 pb-2">
               Our
               <br />
               Vision
@@ -334,7 +345,7 @@ const About = () => {
             ref={sec2Ref}
             className="box2 flex flex-row relative mt-40 z-10 bg-[#436436] shadow-2xl shadow-gray-700 mb-0 w-[69vw] h-auto py-15 items-center self-start"
           >
-            <p className="text-[80px] leading-[0.8] font-passion font-normal text-[#FAF7F0] rotate-90">
+            <p className="text-[80px] tracking-[0.012em] leading-[0.8] font-passion font-normal text-[#FAF7F0] rotate-90">
               Our
               <br />
               Mission
@@ -352,75 +363,76 @@ const About = () => {
         {/* VALUES SECTION */}
         <div
           ref={valuesRef}
-          className="h-[96vh] w-full bg-gradient-to-br from-[#8fa47f] to-[#7a8f6d] px-12 flex flex-col items-center justify-center"
+          className="h-[96vh] w-full bg-linear-to-tl bg-[#2a2a2a] to-lime-900 px-12 flex flex-col items-center justify-center"
         >
-          <h1 className="values-title font-passion font-bold text-7xl mb-10 pt-4 text-[#436436] drop-shadow-lg text-center">
+          <h1 className="values-title tracking-[0.018em] font-passion font-bold text-7xl mb-10 pt-4 text-white [text-shadow:8px_8px_18px_rgba(16,16,16,0.75)] text-center">
             The Plan-B Promise
           </h1>
 
           <div className="flex flex-row justify-evenly items-stretch w-full max-w-7xl gap-8">
             {/* Fresh Ingredients */}
-            <div className="value-card flex flex-col gap-5 justify-center items-center bg-white/10 backdrop-blur-sm rounded-2xl p-10 flex-1 hover:bg-white/20 hover:scale-105 transition-all duration-500 shadow-xl hover:shadow-2xl border-2 border-white/20">
-              <div className=" bg-[#436436] rounded-full p-8 shadow-2xl">
+            <div className="value-card flex flex-col gap-5 justify-center items-center bg-white/7 backdrop-blur-sm rounded-2xl p-10 flex-1 min-h-[420px] hover:bg-white/12 transition-all duration-500 shadow-xl hover:shadow-2xl border-2 border-white/20">
+              <div className="bg-[#436436] rounded-full p-8 shadow-2xl flex-shrink-0">
                 <img
                   src={fresh}
                   alt="fresh_ingredients"
-                  className="w-28 h-auto"
+                  className="w-28 h-28"
                 />
               </div>
-              <h2 className="font-passion font-semibold text-white text-3xl text-center leading-tight">
-                Fresh Ingredients
+              <h2 className="font-passion font-normal leading-[0.85] tracking-[0.04em] text-white text-3xl text-center flex-shrink-0">
+                Fresh
+                <br /> Ingredients
               </h2>
-              <p className="text-white/90 text-center text-base leading-relaxed">
+              <p className="text-white/90  text-center leading-[1.5em] flex-grow">
                 Only the finest, locally-sourced ingredients make it to your
                 plate
               </p>
             </div>
 
             {/* Bold Flavors */}
-            <div className="value-card flex flex-col gap-5 justify-center items-center bg-white/10 backdrop-blur-sm rounded-2xl p-10 flex-1 hover:bg-white/20 hover:scale-105 transition-all duration-500 shadow-xl hover:shadow-2xl border-2 border-white/20">
-              <div className=" bg-[#436436] rounded-full p-8 shadow-2xl">
-                <img src={bold} alt="bold_flavors" className="w-28 h-auto" />
+            <div className="value-card flex flex-col gap-5 justify-center items-center bg-white/7 backdrop-blur-sm rounded-2xl p-10 flex-1 min-h-[420px] hover:bg-white/12 transition-all duration-500 shadow-xl hover:shadow-2xl border-2 border-white/20">
+              <div className="bg-[#436436] rounded-full p-8 shadow-2xl flex-shrink-0">
+                <img src={bold} alt="bold_flavors" className="w-28 h-28" />
               </div>
-              <h2 className="font-passion font-semibold text-white text-3xl text-center leading-tight">
-                Bold Flavors
+              <h2 className="font-passion font-normal leading-[0.85] tracking-[0.04em] text-white text-3xl text-center flex-shrink-0">
+                Bold
+                <br />
+                Flavors
               </h2>
-              <p className="text-white/90 text-center text-base leading-relaxed">
+              <p className="text-white/90 text-center leading-[1.5em] flex-grow">
                 Creative dishes that excite your taste buds with every bite
               </p>
             </div>
 
             {/* Warm Hospitality */}
-            <div className="value-card flex flex-col gap-5 justify-center items-center bg-white/10 backdrop-blur-sm rounded-2xl p-10 flex-1 hover:bg-white/20 hover:scale-105 transition-all duration-500 shadow-xl hover:shadow-2xl border-2 border-white/20">
-              <div className="bg-[#436436] rounded-full p-8 shadow-2xl">
-                <img
-                  src={warm}
-                  alt="warm_hospitality"
-                  className="w-28 h-auto"
-                />
+            <div className="value-card flex flex-col gap-5 justify-center items-center bg-white/7 backdrop-blur-sm rounded-2xl p-10 flex-1 min-h-[420px] hover:bg-white/12 transition-all duration-500 shadow-xl hover:shadow-2xl border-2 border-white/20">
+              <div className="bg-[#436436] rounded-full p-8 shadow-2xl flex-shrink-0">
+                <img src={warm} alt="warm_hospitality" className="w-28 h-28" />
               </div>
-              <h2 className="font-passion font-semibold text-white text-3xl text-center leading-tight">
-                Warm Hospitality
+              <h2 className="font-passion font-normal leading-[0.85] tracking-[0.04em] text-white text-3xl text-center flex-shrink-0">
+                Warm
+                <br /> Hospitality
               </h2>
-              <p className="text-white/90 text-center text-base leading-relaxed">
+              <p className="text-white/90 text-center leading-[1.5em] flex-grow">
                 Service that makes you feel like family from the moment you
                 arrive
               </p>
             </div>
 
             {/* Consistent Quality */}
-            <div className="value-card flex flex-col gap-5 justify-center items-center bg-white/10 backdrop-blur-sm rounded-2xl p-10 flex-1 hover:bg-white/20 hover:scale-105 transition-all duration-500 shadow-xl hover:shadow-2xl border-2 border-white/20">
-              <div className="bg-[#436436] rounded-full p-8 shadow-2xl">
+            <div className="value-card flex flex-col gap-5 justify-center items-center bg-white/7 backdrop-blur-sm rounded-2xl p-10 flex-1 min-h-[420px] hover:bg-white/12 transition-all duration-500 shadow-xl hover:shadow-2xl border-2 border-white/20">
+              <div className="bg-[#436436] rounded-full p-8 shadow-2xl flex-shrink-0">
                 <img
                   src={consistent}
                   alt="consistent_quality"
-                  className="w-28 h-auto"
+                  className="w-28 h-28"
                 />
               </div>
-              <h2 className="font-passion font-semibold text-white text-3xl text-center leading-tight">
-                Consistent Quality
+              <h2 className="font-passion font-normal leading-[0.85] tracking-[0.04em] text-white text-3xl text-center flex-shrink-0">
+                Consistent
+                <br /> Quality
               </h2>
-              <p className="text-white/90 text-center text-base leading-relaxed">
+              <p className="text-white/90 text-center leading-[1.5em] flex-grow">
                 Excellence you can count on, visit after visit, dish after dish
               </p>
             </div>
