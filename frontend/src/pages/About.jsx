@@ -206,7 +206,7 @@ const About = () => {
       className="flex flex-col items-center justify-center min-h-screen bg-[#deddd1]"
     >
       {/* Restaurant video   */}
-      <div className="relative w-full h-[100vh] overflow-hidden">
+      <div className="relative w-full h-screen overflow-hidden">
         <video
           src={vid}
           autoPlay
@@ -371,68 +371,68 @@ const About = () => {
 
           <div className="flex flex-row justify-evenly items-stretch w-full max-w-7xl gap-8">
             {/* Fresh Ingredients */}
-            <div className="value-card flex flex-col gap-5 justify-center items-center bg-white/7 backdrop-blur-sm rounded-2xl p-10 flex-1 min-h-[420px] hover:bg-white/12 transition-all duration-500 shadow-xl hover:shadow-2xl border-2 border-white/20">
-              <div className="bg-[#436436] rounded-full p-8 shadow-2xl flex-shrink-0">
+            <div className="value-card flex flex-col gap-5 justify-center items-center bg-white/7 backdrop-blur-sm rounded-2xl p-10 flex-1 min-h-105 hover:bg-white/12 transition-all duration-500 shadow-xl hover:shadow-2xl border-2 border-white/20">
+              <div className="bg-[#436436] rounded-full p-8 shadow-2xl shrink-0">
                 <img
                   src={fresh}
                   alt="fresh_ingredients"
                   className="w-28 h-28"
                 />
               </div>
-              <h2 className="font-passion font-normal leading-[0.85] tracking-[0.04em] text-white text-3xl text-center flex-shrink-0">
+              <h2 className="font-passion font-normal leading-[0.85] tracking-[0.04em] text-white text-3xl text-center shrink-0">
                 Fresh
                 <br /> Ingredients
               </h2>
-              <p className="text-white/90  text-center leading-[1.5em] flex-grow">
+              <p className="text-white/90  text-center leading-[1.5em] grow">
                 Only the finest, locally-sourced ingredients make it to your
                 plate
               </p>
             </div>
 
             {/* Bold Flavors */}
-            <div className="value-card flex flex-col gap-5 justify-center items-center bg-white/7 backdrop-blur-sm rounded-2xl p-10 flex-1 min-h-[420px] hover:bg-white/12 transition-all duration-500 shadow-xl hover:shadow-2xl border-2 border-white/20">
-              <div className="bg-[#436436] rounded-full p-8 shadow-2xl flex-shrink-0">
+            <div className="value-card flex flex-col gap-5 justify-center items-center bg-white/7 backdrop-blur-sm rounded-2xl p-10 flex-1 min-h-105 hover:bg-white/12 transition-all duration-500 shadow-xl hover:shadow-2xl border-2 border-white/20">
+              <div className="bg-[#436436] rounded-full p-8 shadow-2xl shrink-0">
                 <img src={bold} alt="bold_flavors" className="w-28 h-28" />
               </div>
-              <h2 className="font-passion font-normal leading-[0.85] tracking-[0.04em] text-white text-3xl text-center flex-shrink-0">
+              <h2 className="font-passion font-normal leading-[0.85] tracking-[0.04em] text-white text-3xl text-center shrink-0">
                 Bold
                 <br />
                 Flavors
               </h2>
-              <p className="text-white/90 text-center leading-[1.5em] flex-grow">
+              <p className="text-white/90 text-center leading-[1.5em] grow">
                 Creative dishes that excite your taste buds with every bite
               </p>
             </div>
 
             {/* Warm Hospitality */}
-            <div className="value-card flex flex-col gap-5 justify-center items-center bg-white/7 backdrop-blur-sm rounded-2xl p-10 flex-1 min-h-[420px] hover:bg-white/12 transition-all duration-500 shadow-xl hover:shadow-2xl border-2 border-white/20">
-              <div className="bg-[#436436] rounded-full p-8 shadow-2xl flex-shrink-0">
+            <div className="value-card flex flex-col gap-5 justify-center items-center bg-white/7 backdrop-blur-sm rounded-2xl p-10 flex-1 min-h-105 hover:bg-white/12 transition-all duration-500 shadow-xl hover:shadow-2xl border-2 border-white/20">
+              <div className="bg-[#436436] rounded-full p-8 shadow-2xl shrink-0">
                 <img src={warm} alt="warm_hospitality" className="w-28 h-28" />
               </div>
-              <h2 className="font-passion font-normal leading-[0.85] tracking-[0.04em] text-white text-3xl text-center flex-shrink-0">
+              <h2 className="font-passion font-normal leading-[0.85] tracking-[0.04em] text-white text-3xl text-center shrink-0">
                 Warm
                 <br /> Hospitality
               </h2>
-              <p className="text-white/90 text-center leading-[1.5em] flex-grow">
+              <p className="text-white/90 text-center leading-[1.5em] grow">
                 Service that makes you feel like family from the moment you
                 arrive
               </p>
             </div>
 
             {/* Consistent Quality */}
-            <div className="value-card flex flex-col gap-5 justify-center items-center bg-white/7 backdrop-blur-sm rounded-2xl p-10 flex-1 min-h-[420px] hover:bg-white/12 transition-all duration-500 shadow-xl hover:shadow-2xl border-2 border-white/20">
-              <div className="bg-[#436436] rounded-full p-8 shadow-2xl flex-shrink-0">
+            <div className="value-card flex flex-col gap-5 justify-center items-center bg-white/7 backdrop-blur-sm rounded-2xl p-10 flex-1 min-h-105 hover:bg-white/12 transition-all duration-500 shadow-xl hover:shadow-2xl border-2 border-white/20">
+              <div className="bg-[#436436] rounded-full p-8 shadow-2xl shrink-0">
                 <img
                   src={consistent}
                   alt="consistent_quality"
                   className="w-28 h-28"
                 />
               </div>
-              <h2 className="font-passion font-normal leading-[0.85] tracking-[0.04em] text-white text-3xl text-center flex-shrink-0">
+              <h2 className="font-passion font-normal leading-[0.85] tracking-[0.04em] text-white text-3xl text-center shrink-0">
                 Consistent
                 <br /> Quality
               </h2>
-              <p className="text-white/90 text-center leading-[1.5em] flex-grow">
+              <p className="text-white/90 text-center leading-[1.5em] grow">
                 Excellence you can count on, visit after visit, dish after dish
               </p>
             </div>
