@@ -13,6 +13,9 @@ import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
+
+gsap.registerPlugin(SplitText);
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -40,20 +43,23 @@ const About = () => {
         repeat: -1,
       });
 
-      // Story section animations
+      const splitStory = new SplitText(".story-title", { type: "chars" });
+
       gsap.fromTo(
-        ".story-title",
-        { opacity: 0, y: -50, scale: 0.9 },
+        splitStory.chars,
+        {
+          opacity: 0,
+          y: 100,
+        },
         {
           opacity: 1,
           y: 0,
-          scale: 1,
-          duration: 1,
-          ease: "back.out(1.7)",
+          duration: 0.3,
+          ease: "power2.out",
+          stagger: 0.2,
           scrollTrigger: {
             trigger: storyRef.current,
-            start: "top 70%",
-            toggleActions: "play none none reverse",
+            start: "top 50%",
           },
         },
       );
@@ -64,13 +70,12 @@ const About = () => {
         {
           opacity: 1,
           y: 0,
-          duration: 1,
-          delay: 0.3,
+          duration: 0.5,
+          delay: 0.5,
           ease: "power2.out",
           scrollTrigger: {
             trigger: storyRef.current,
-            start: "top 70%",
-            toggleActions: "play none none reverse",
+            start: "top 40%",
           },
         },
       );
@@ -184,9 +189,9 @@ const About = () => {
         ref={storyRef}
         className="px-6 md:px-12 lg:px-20 min-h-[90vh] w-full relative bg-[#F3EEDD] flex flex-col items-center justify-center pt-20 pb-20 overflow-hidden"
       >
-        <h1 className="story-title font-passion font-bold text-[#436436] text-6xl md:text-7xl lg:text-8xl mb-12 md:mb-16 text-center z-20">
+        <p className="story-title font-passion font-bold text-[#436436] text-6xl md:text-7xl lg:text-8xl mb-12 md:mb-16 text-center z-20">
           Our Story
-        </h1>
+        </p>
 
         {/* Big motifs */}
         <img
