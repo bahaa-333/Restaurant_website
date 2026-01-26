@@ -23,6 +23,8 @@ const About = () => {
   const containerRef = useRef(null);
   const storyRef = useRef(null);
   const valuesRef = useRef(null);
+  const sec1Ref = useRef(null);
+  const sec2Ref = useRef(null);
 
   useGSAP(
     () => {
@@ -112,6 +114,35 @@ const About = () => {
         yoyo: true,
         repeat: -1,
         stagger: 0.2,
+      });
+      // Mission and Vision section animations
+      gsap.from(".image1", {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: { trigger: sec1Ref.current, start: "top 80%" },
+      });
+      gsap.from(".box1", {
+        x: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: { trigger: sec1Ref.current, start: "top 80%" },
+      });
+      gsap.from(".image2", {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: { trigger: sec2Ref.current, start: "top 80%" },
+      });
+      gsap.from(".box2", {
+        x: -100,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: { trigger: sec2Ref.current, start: "top 80%" },
       });
 
       // Values section animations
@@ -263,13 +294,17 @@ const About = () => {
         {/* VISION SECTION */}
         <div className="h-[80vh] w-full">
           <img
+            ref={sec1Ref}
             src={image}
             alt="Restaurant interior"
-            className="h-115 w-auto absolute shadow-lg shadow-gray-500 top-18 left-1 rounded-md"
+            className="image1 h-115 w-auto absolute shadow-lg shadow-gray-500 top-18 left-1 rounded-md"
           />
 
           {/* Our Vision */}
-          <div className="flex flex-row justify-self-end mt-45 bg-[#FFD746] shadow-2xl shadow-gray-700 w-[55vw] min-h-[36vh] items-center">
+          <div
+            ref={sec1Ref}
+            className="box1 flex flex-row justify-self-end mt-45 bg-[#FFD746] shadow-2xl shadow-gray-700 w-[55vw] min-h-[36vh] items-center"
+          >
             <p className="text-lg text-white text-justify ml-5 p-6 flex-1">
               Our vision is to become a leading casual dining destination in the
               region, known for consistency, creativity, and a memorable guest
@@ -288,13 +323,17 @@ const About = () => {
         {/* MISSION SECTION */}
         <div className="h-[92vh] w-full relative">
           <img
+            ref={sec2Ref}
             src={image2}
             alt="Restaurant dish"
-            className="h-130 w-auto absolute shadow-lg shadow-gray-500 top-10 right-4 mb-80 rounded-md"
+            className="image2 h-130 w-auto absolute shadow-lg shadow-gray-500 top-10 right-4 mb-80 rounded-md"
           />
 
           {/* Our Mission */}
-          <div className="flex flex-row relative mt-40 z-10 bg-[#436436] shadow-2xl shadow-gray-700 mb-0 w-[69vw] h-auto py-15 items-center self-start">
+          <div
+            ref={sec2Ref}
+            className="box2 flex flex-row relative mt-40 z-10 bg-[#436436] shadow-2xl shadow-gray-700 mb-0 w-[69vw] h-auto py-15 items-center self-start"
+          >
             <p className="text-[80px] leading-[0.8] font-passion font-normal text-[#FAF7F0] rotate-90">
               Our
               <br />
