@@ -29,3 +29,61 @@
 .favorites-section {
   @apply bg-[#FFD476] w-screen h-auto  flex flex-col justify-center items-center;
 }
+
+/*conatct page styles*/
+.phone-input-wrapper .PhoneInput {
+  @apply w-full;
+}
+
+.phone-input-wrapper .PhoneInputInput {
+  @apply w-full pl-12 pr-4 py-4;
+  @apply bg-white/5;
+  @apply border-2 border-[#436436]/30;
+  @apply rounded-lg;
+  @apply text-white text-base;
+  @apply transition-all duration-300;
+}
+
+.phone-input-wrapper .PhoneInputInput::placeholder {
+  @apply text-white/50;
+}
+
+.phone-input-wrapper .PhoneInputInput:focus {
+  @apply outline-none;
+  @apply border-[#FFD746];
+  @apply ring-2 ring-[#FFD746]/30;
+}
+
+.phone-input-wrapper.phone-input-error .PhoneInputInput {
+  @apply border-red-500;
+  @apply pr-12;
+}
+
+.phone-input-wrapper.phone-input-error .PhoneInputInput:focus {
+  @apply ring-2 ring-red-500/30;
+}
+
+.phone-input-wrapper .PhoneInputCountry {
+  @apply absolute left-3 top-1/2 -translate-y-1/2;
+  @apply z-[1];
+}
+
+.phone-input-wrapper .PhoneInputCountryIcon {
+  @apply w-6 h-6;
+  @apply rounded;
+  @apply shadow-md;
+}
+
+.phone-input-wrapper .PhoneInputCountrySelect {
+  @apply cursor-pointer;
+  @apply opacity-0;
+  @apply absolute top-0 left-0;
+  @apply w-full h-full;
+}
+
+.phone-input-wrapper .PhoneInputCountrySelectArrow {
+  @apply text-[#FFD746];
+  @apply text-xs;
+  @apply ml-1;
+  @apply opacity-80;
+}
