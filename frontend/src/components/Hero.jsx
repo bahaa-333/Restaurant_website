@@ -8,11 +8,11 @@ import SwiperShow from "./SwiperShow.jsx";
 
 const Hero = () => {
   return (
-    <div className="hero-section">
-      <div className="w-3/4 h-dvh">
+    <div className="hero-section flex">
+      <div className="w-[78%] p-3 h-dvh">
         {/* Left Side - video */}
         {/*stack of video, logo, slogan*/}
-        <div className="relative w-full h-full overflow-hidden">
+        <div className="relative w-full h-full rounded-lg overflow-hidden">
           <video
             src={video}
             muted
@@ -24,7 +24,7 @@ const Hero = () => {
             <img
               src={logo}
               alt="Plan-B logo"
-              className="w-[26vw]  drop-shadow-xl"
+              className="w-[38%]  drop-shadow-xl"
             />
             <h2 className="text-white text-2xl font-montserrat leading-snug drop-shadow-lg pl-4">
               the perfect Plan-B for when Mom's homecooked meals <br /> just
@@ -34,7 +34,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="w-1/4 h-dvh bg-[#1c1c1c]">
+      <div className="w-[20%] h-dvh bg-inherit py-3 items-center ">
         {/* Right Side - verical caroussel  */}
         <SwiperShow />
       </div>

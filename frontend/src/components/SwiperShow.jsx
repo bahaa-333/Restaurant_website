@@ -15,7 +15,7 @@ const SwiperShow = () => {
       direction="vertical"
       slidesPerView={2}
       centeredSlides
-      spaceBetween={18}
+      spaceBetween={16}
       loop
       speed={3000}
       allowTouchMove={false}
@@ -24,17 +24,17 @@ const SwiperShow = () => {
         disableOnInteraction: false,
         reverseDirection: true,
       }}
-      className="h-full w-full py-4"
+      className="h-full w-full px-5"
     >
       {[swiper1, swiper2, swiper3, swiper4, swiper5].map((img, index) => (
         <SwiperSlide
           key={index}
-          className="aspect-square flex items-center justify-center"
+          className="flex aspect-square items-center justify-center"
         >
           <img
             src={img}
             alt={`Slide ${index + 1}`}
-            className="h-full w-full object-contain rounded-lg"
+            className="w-full h-full object-cover rounded-2xl"
           />
         </SwiperSlide>
       ))}

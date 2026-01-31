@@ -20,7 +20,7 @@
 }
 
 .hero-section {
-  @apply bg-[#E9E2D6] w-screen h-dvh flex flex-row justify-start items-start;
+  @apply bg-[#1d2225] w-screen h-dvh flex flex-row justify-start items-start;
 }
 
 .about-section {
